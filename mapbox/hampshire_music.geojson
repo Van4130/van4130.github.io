@@ -1,0 +1,115 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Iron Horse",
+          "address": "18 Center St, Northampton, MA 01060"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.6315831, 42.3189865]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Parlor Room",
+          "address": "32 Masonic St, Northampton, MA 01060"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.633449, 42.318475]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Academy of Music",
+          "address": "274 Main St, Northampton, MA 01060"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.63358910000001, 42.317377199999996]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "BOMBYX Center for Arts & Equity",
+          "address": "130 Pine St, Florence, MA 01062"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.67449979999999, 42.3315031]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Pines Theater at Look Park",
+          "address": "Look Park, Northampton, MA 01062"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.68570179999999, 42.3433463]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Drake",
+          "address": "44 N Pleasant St, Amherst, MA 01002"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.5201584, 42.376190699999995]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Heavy Culture Cooperative",
+          "address": "1 Northampton St, Easthampton, MA 01027"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.6705538, 42.272219199999995]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Marigold Theater",
+          "address": "84 Cottage St, Easthampton, MA 01027"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.66555869999999, 42.264413999999995]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Luthier's Co-Op & Backstage Bar",
+          "address": "108 Cottage St, Easthampton, MA 01027"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.6647174, 42.264103999999996]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "CitySpace",
+          "address": "43 Main St, Easthampton, MA 01027"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-72.67250229999999, 42.2713368]
+        }
+      }
+    ]
+}

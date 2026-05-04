@@ -1,0 +1,130 @@
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Colors chosen using coolors.co */
+:root {
+  --primary: #1C1C1E;
+  --secondary: #D1D1D3;
+  --highlight: #00E5C3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--primary);
+}
+
+body {
+  background-color: inherit;
+  color: var(--secondary);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--highlight);
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+}
+
+.subheader {
+  font-size: 1.6rem;
+  color: var(--secondary);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--highlight);
+  margin-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--highlight);
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  margin-left: 2%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  color: var(--highlight);
+}
+
+nav li:hover {
+  text-decoration: underline;
+}
+
+.home:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+.contact_links li:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--highlight);
+}
+
+.contact_links ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+iframe {
+  width: 100%;
+  height: 75vh;
+  border: none;
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid var(--highlight);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--highlight);
+    transition: background 0.2s; /* TODO: Investigate and fix. */
+}
+
+.link:hover {
+    text-decoration: underline;
+}
