@@ -1,3 +1,6 @@
+// Ref https://leafletjs.com/reference.html
+// Ref https://leafletjs.com/examples/quick-start/
+
 var map = L.map('map', { scrollWheelZoom: true }).setView([42.38664, -72.53141], 16);
 
 // Set base map: CartoDB_PositronNoLabels (https://leaflet-extras.github.io/leaflet-providers/preview/)
@@ -7,7 +10,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png
 	maxZoom: 20
 }).addTo(map);
 
-// Ref https://leafletjs.com/examples/quick-start/
 // Pop-ups
 var lot12pop = L.popup()
   .setLatLng([42.3918, -72.5362])
@@ -21,17 +23,13 @@ var morrillpop = L.popup()
 
 // Circles
 var lot12 = L.circle([42.3918, -72.5362], {
-  radius: 0,
   radius: 50,
   color: 'blue',
   fillColor: 'yellow',
   fillOpacity: 0.05
 }).addTo(map);
 
-
-
 var morrill = L.circle([42.39057982848214, -72.52440000259595], {
-  
   radius: 50,
   color: 'blue',
   fillColor: 'yellow',
@@ -68,6 +66,16 @@ var route = L.polyline(waypoints, {
   lineJoin: 'round',
   snakingSpeed: 100
 }).addTo(map).snakeIn();
+
+// Animate circles
+// Ref https://unpkg.com/leaflet.polyline.snakeanim@0.2.0/L.Polyline.SnakeAnim.js
+route.on('snakestart', function() {
+  animateCircles(morrill, 25);
+});
+
+route.on('snakeend', function() {
+  // animate morrill circle
+});
 
 // Fit map to features
 var group = L.featureGroup([route, lot12, morrill]);
