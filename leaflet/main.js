@@ -74,7 +74,7 @@ route.on('snakestart', function() {
 });
 
 route.on('snakeend', function() {
-  // animate morrill circle
+  animateCircles(lot12, 25);
 });
 
 // Fit map to features
