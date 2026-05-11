@@ -21,13 +21,17 @@ var morrillpop = L.popup()
 
 // Circles
 var lot12 = L.circle([42.3918, -72.5362], {
+  radius: 0,
   radius: 50,
   color: 'blue',
   fillColor: 'yellow',
   fillOpacity: 0.05
 }).addTo(map);
 
+
+
 var morrill = L.circle([42.39057982848214, -72.52440000259595], {
+  
   radius: 50,
   color: 'blue',
   fillColor: 'yellow',
@@ -54,7 +58,7 @@ var waypoints = [
   [42.39059171441421, -72.52643848120869],
   [42.390809622770085, -72.52492571550134],
   [42.39057982848214, -72.52482379157078],
-  [42.39057982848214, -72.52440000259595],  // <My office, Morrill Science Center
+  [42.39057982848214, -72.52440000259595],  // My office, Morrill Science Center
 ];
 
 var route = L.polyline(waypoints, {
@@ -65,5 +69,9 @@ var route = L.polyline(waypoints, {
   snakingSpeed: 100
 }).addTo(map).snakeIn();
 
+// Fit map to features
 var group = L.featureGroup([route, lot12, morrill]);
 map.fitBounds(group.getBounds(), { padding: [60, 60] });
+
+// Scale bar
+L.control.scale({ position: 'bottomright' }).addTo(map);
