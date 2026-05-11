@@ -1,4 +1,4 @@
-var map = L.map('map', { scrollWheelZoom: false }).setView([42.38664, -72.53141], 16);
+var map = L.map('map', { scrollWheelZoom: true }).setView([42.38664, -72.53141], 16);
 
 // Set base map: CartoDB_PositronNoLabels (https://leaflet-extras.github.io/leaflet-providers/preview/)
 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
@@ -34,10 +34,8 @@ var morrill = L.circle([42.39057982848214, -72.52440000259595], {
   fillOpacity: .05
 }).addTo(map);
 
-morrill.bindPopup("Morrill Science Center. Here be confusing.").openPopup();
+morrill.bindPopup("Morrill Science Center").openPopup();
 lot12.bindPopup("Lot 12. Here be dragons!").openPopup();
-
-// map.on('click', onMapClick);
 
 // Polyline
 var waypoints = [
@@ -60,11 +58,12 @@ var waypoints = [
 ];
 
 var route = L.polyline(waypoints, {
-  color: '#4fc3f7',
+  color: '#f13716',
   weight: 4,
-  opacity: 0.85,
+  opacity: 1,
   lineJoin: 'round',
-  snakingSpeed: 200
+  snakingSpeed: 100
 }).addTo(map).snakeIn();
 
-// map.fitBounds(route.getBounds(), { padding: [60, 60] });
+var group = L.featureGroup([route, lot12, morrill]);
+map.fitBounds(group.getBounds(), { padding: [60, 60] });
